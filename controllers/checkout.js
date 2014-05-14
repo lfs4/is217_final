@@ -9,6 +9,7 @@ exports.showOrders = function(req, res){
 		{
 			// var laptop = new laptopObj();
 
+			// constructor pattern that makes a laptop object from retrieved data
 			var laptop = new laptopObj(laptops[i].price,laptops[i].screenSize,laptops[i].hardDriveSize, laptops[i].memorySize);
 			
 			//decorator pattern, addes specs to laptop

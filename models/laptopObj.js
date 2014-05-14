@@ -1,3 +1,5 @@
+
+// constructor for laptop objects
 var makeLaptop = function (price, screenSize, hardDriveSize, memorySize) {
 	var newLaptop = {};
 
