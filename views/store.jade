@@ -1,0 +1,43 @@
+extends layout
+
+block content
+  a(href='/checkout') Your Orders
+  h1= title
+  br
+  h1(id='price')
+  br
+  form(id='orderForm' ,action='/', type=post)
+   h2 Screen Size
+   p
+   label
+    input(type='radio', name='screenSize', value=11, checked)
+   | 11 inch
+   br
+   label
+    input(type='radio', name='screenSize', value=15)
+   | 15 inch (+ $200)
+   br
+   br
+   h2 Hard Drive Size
+   label.radio.inline
+    input(type='radio', name='hardDriveSize', value=128, checked)
+   | 128
+   br
+   label
+    input(type='radio', name='hardDriveSize', value=256)
+   | 256 (+ $200)
+   br
+   br
+   h2 MemorySize
+   label
+    input(type='radio', name='memorySize', value=8, checked)
+   | 8GB
+   br
+   label
+    input(type='radio', name='memorySize', value=16)
+   | 16GB (+ $200)
+   br 
+   br
+   input(type='submit', value='Place Order')
+
+
