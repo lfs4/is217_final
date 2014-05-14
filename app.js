@@ -6,22 +6,31 @@ var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 var mongoose = require('mongoose');
-
 // // var routes = require('./rts');
 // var users = require('./rts/user');
 
 var app = express();
 
-
-mongoose.connect('mongodb://localhost/laptops');
+var Laptop = require('./models/laptop.js');
+mongoose.connect('mongodb://localhost/store');
 require('./models/laptop');
 
 var db = mongoose.connection;
 db.on('error', console.error.bind(console, 'connection error: '));
 
 db.once('open', function callback(){
-
-})
+   /* var laptop = new Laptop({
+        price: 100,
+        hardDriveSize: 50,
+        memorySize: 6,
+        screenSize: 15
+    })
+    laptop.save(function(err,laptops){
+        if(err) return console.error(err);
+    });
+    console.log(laptop);*/
+});
+//laptop = new Laptop();
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
