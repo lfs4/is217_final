@@ -16,25 +16,19 @@ exports.makeOrder = function(req, res){
 		screenSize: screenSize,
 		hardDriveSize: hardDriveSize,
 		memorySize: memorySize
-	})
+	});
+
+/*	laptop.updateScreenSize = function(screenSize){
+		this.screenSize = screenSize;
+		console.log("screenSize: " + this.screenSize);
+	}
+
+	laptop.screenSize(screenSize);*/
+/*		
+	})*/
     laptop.save(function(err,laptops){
         if(err) return console.error(err);
     });
-	// latptop.setScreenSize = function(screenSize){
-	// 	this.screenSize = screenSize;
-	// }
-	// latptop.setHardDriveSize = function(hardDriveSize){
-	// 	this.hardDriveSize = hardDriveSize;
-	// }
-	// laptop.setMemorySize = function(memorySize){
-	// 	this.memorySize = memorySize;
-	// }
-	// laptop.setPrice = function(price){
-	// 	this.price = price;
-	// }
-	// laptop.Specs = function(){
-
-	// }
 
 	console.log("added laptop: " + laptop);
 	res.render('store', {title: "Thank you for your purchase"});

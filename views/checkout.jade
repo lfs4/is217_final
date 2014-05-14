@@ -7,9 +7,6 @@ block content
      li
       | Price $#{laptop.price}
      li
-      | Screen Size: #{laptop.screenSize} inches
-     li
-      | Hard Drive Size: #{laptop.hardDriveSize} GB
-     li
-      | MemorySize: #{laptop.memorySize} GB
-    
+      | Specs:
+      br
+      |		#{laptop.showSpecs()} 
