@@ -1,0 +1,15 @@
+extends layout
+
+block content
+  h1= title
+  each laptop in orders
+    ul
+     li
+      | Price $#{laptop.price}
+     li
+      | Screen Size: #{laptop.screenSize} inches
+     li
+      | Hard Drive Size: #{laptop.hardDriveSize} GB
+     li
+      | MemorySize: #{laptop.memorySize} GB
+    

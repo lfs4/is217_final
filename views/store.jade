@@ -6,7 +6,8 @@ block content
   br
   h1(id='price')
   br
-  form(id='orderForm' ,action='/', type=post)
+  form(id='orderForm' ,action='/', method='post')
+   input(type='hidden', name='totalPrice' id='totalPrice')
    h2 Screen Size
    p
    label
