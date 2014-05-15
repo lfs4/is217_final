@@ -36,6 +36,7 @@ $(document).ready(function(){
 	function updatePrice(){
 			var totalPrice = 1000 + screenPrice + hardDrivePrice + memoryPrice;
 			var price = "$" + totalPrice;
+		$("#totalPrice").val(totalPrice);
 		$("#price").html(price) ;
 	}
 });
